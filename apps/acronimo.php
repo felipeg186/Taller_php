@@ -48,10 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $ejemplos = [
-    'As Soon As Possible'       => 'ASAP',
-    'Liquid-crystal display'    => 'LCD',
-    "Thank George It's Friday!" => 'TGIF',
-    'Portable Network Graphics' => 'PNG',
+    'Programacion Avanzada'       => 'PA',
+    'Hyper Text Markup Language'    => 'HTML',
+    "Hypertext Preprocessor" => 'HP',
+    
 ];
 ?>
 <!DOCTYPE html>
