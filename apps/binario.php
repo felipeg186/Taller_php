@@ -106,29 +106,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="result-box">
         <h3><?php echo htmlspecialchars($inputNum); ?> en binario</h3>
         <div class="result-value"><?php echo htmlspecialchars($binario); ?></div>
-        <p style="margin-top:14px;font-size:0.78rem;color:#aaa;">
+        <p class="result-verify">
             Verificación PHP: <?php echo decbin((int)$inputNum); ?>
         </p>
     </div>
 
     <?php if (!empty($pasos) && (int)$inputNum !== 0): ?>
-    <div style="margin-top:28px;">
-        <h3 style="font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;color:#444;">Proceso de divisiones sucesivas</h3>
-        <div class="form-box" style="padding:0;">
-            <div class="result-item" style="padding:10px 20px;background:#f5f5f0;">
+    <div class="steps-section">
+        <h3 class="steps-title">Proceso de divisiones sucesivas</h3>
+        <div class="form-box form-box--no-padding">
+            <div class="result-item result-item--header">
                 <span class="result-label">Número</span>
                 <span class="result-label">Cociente</span>
                 <span class="result-label">Residuo (bit)</span>
             </div>
             <?php foreach ($pasos as $paso): ?>
-            <div class="result-item" style="padding:10px 20px;">
+            <div class="result-item result-item--row">
                 <span><?php echo $paso[0]; ?></span>
                 <span><?php echo $paso[1]; ?></span>
                 <strong><?php echo $paso[2]; ?></strong>
             </div>
             <?php endforeach; ?>
         </div>
-        <p style="font-size:0.78rem;color:#666;margin-top:8px;">
+        <p class="steps-note">
             Los bits se leen de abajo hacia arriba → <strong><?php echo htmlspecialchars($binario); ?></strong>
         </p>
     </div>

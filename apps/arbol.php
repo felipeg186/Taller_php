@@ -142,7 +142,7 @@ class ArbolBinario {
 }
 
 function parsearRecorrido(string $input): array {
-    // Acepta → o -> o comas o espacios como separadores
+   
     $limpio = str_replace(['→', '->', '→'], ',', $input);
     $partes = preg_split('/[\s,;]+/', trim($limpio));
     $nodos  = [];
@@ -266,11 +266,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if ($arbol && empty($error)): ?>
 
     <div class="tree-container">
-        <p style="font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:#666;margin-bottom:12px;">Estructura del árbol</p>
+        <p class="tree-label">Estructura del árbol</p>
         <pre><?php echo htmlspecialchars($visual); ?></pre>
     </div>
 
-    <div class="result-box" style="margin-top:20px;">
+    <div class="result-box result-box--mt">
         <h3>Recorridos generados</h3>
         <div class="result-item">
             <span class="result-label">Preorden</span>
@@ -288,8 +288,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php endif; ?>
 
-    <!-- Ejemplo -->
-    <div style="margin-top:32px;">
+    
+    <div class="example-section">
         <div class="alert info">
             <strong>Ejemplo:</strong><br>
             Preorden: A → B → D → E → C<br>

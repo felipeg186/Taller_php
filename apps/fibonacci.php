@@ -22,7 +22,7 @@ class Sucesion {
 
    
     public function factorial(): array {
-        if ($this->n <= 0) return [1]; // 0! = 1
+        if ($this->n <= 0) return [1]; 
         $pasos = [];
         $acum  = 1;
         for ($i = 1; $i <= $this->n; $i++) {
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ?>
         </div>
         <?php if ($operacion === 'factorial'): ?>
-        <p style="margin-top:14px;font-size:0.85rem;color:#aaa;">
+        <p class="fib-final">
             Resultado final: <strong><?php echo end($serie); ?></strong>
         </p>
         <?php endif; ?>

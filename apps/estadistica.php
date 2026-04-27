@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ?>
             </strong>
         </div>
-        <p style="margin-top:14px;font-size:0.78rem;color:#888;">
+        <p class="stats-sorted">
             Datos ordenados: <?php
                 $ord = $numeros;
                 sort($ord);

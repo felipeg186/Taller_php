@@ -1,5 +1,5 @@
 <?php
-// apps/07_calculadora.php
+
 session_start();
 
 class Calculadora {
@@ -44,7 +44,7 @@ class Calculadora {
     }
 }
 
-// Inicializar historial
+
 if (!isset($_SESSION['historial'])) {
     $_SESSION['historial'] = [];
 }
@@ -54,12 +54,12 @@ $expresion  = '';
 $error      = '';
 $numA = $numB = $op = '';
 
-// Borrar historial
+
 if (isset($_POST['borrar_historial'])) {
     $_SESSION['historial'] = [];
 }
 
-// Calcular
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['calcular'])) {
     $numA = trim($_POST['num_a'] ?? '');
     $numB = trim($_POST['num_b'] ?? '');
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['calcular'])) {
         $expresion = $calc->getExpresion();
 
         if (!is_string($resultado)) {
-            // Guardar en historial (máx 20 entradas)
+            
             array_unshift($_SESSION['historial'], [
                 'expr'   => $expresion,
                 'result' => $resultado,
@@ -177,18 +177,18 @@ $opNombres = [
     <?php if ($resultado !== null): ?>
     <div class="result-box">
         <h3>Resultado</h3>
-        <p style="font-size:0.8rem;color:#aaa;margin-bottom:8px;"><?php echo htmlspecialchars($expresion); ?></p>
+        <p class="result-expr"><?php echo htmlspecialchars($expresion); ?></p>
         <div class="result-value"><?php echo htmlspecialchars((string)round($resultado, 10)); ?></div>
     </div>
     <?php endif; ?>
 
     
     <div class="history-box">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <div class="history-header">
             <h3>Historial de operaciones</h3>
             <?php if (!empty($_SESSION['historial'])): ?>
-            <form method="POST" action="" style="margin:0;">
-                <button type="submit" name="borrar_historial" class="secondary" style="font-size:0.72rem;padding:6px 14px;">
+            <form method="POST" action="" class="history-clear-form">
+                <button type="submit" name="borrar_historial" class="secondary btn-clear">
                     Borrar historial
                 </button>
             </form>
@@ -196,12 +196,12 @@ $opNombres = [
         </div>
 
         <?php if (empty($_SESSION['historial'])): ?>
-            <p style="font-size:0.82rem;color:#aaa;">Aún no hay operaciones registradas.</p>
+            <p class="history-empty">Aún no hay operaciones registradas.</p>
         <?php else: ?>
             <?php foreach ($_SESSION['historial'] as $h): ?>
             <div class="history-item">
                 <span><?php echo htmlspecialchars($h['expr']); ?> = <strong><?php echo htmlspecialchars((string)round($h['result'], 10)); ?></strong></span>
-                <span style="color:#aaa;font-size:0.75rem;"><?php echo $h['time']; ?></span>
+                <span class="history-time"><?php echo $h['time']; ?></span>
             </div>
             <?php endforeach; ?>
         <?php endif; ?>

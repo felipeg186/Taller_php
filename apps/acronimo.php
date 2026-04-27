@@ -108,15 +108,15 @@ $ejemplos = [
     <div class="result-box">
         <h3>Resultado</h3>
         <div class="result-value"><?php echo htmlspecialchars($acronimo); ?></div>
-        <p style="margin-top:12px;font-size:0.8rem;color:#aaa;">
+        <p class="result-note">
             Frase procesada: <em><?php echo htmlspecialchars($resultado); ?></em>
         </p>
     </div>
     <?php endif; ?>
 
-    <!-- Ejemplos -->
-    <div style="margin-top:36px;">
-        <h3 style="font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;color:#444;">Ejemplos</h3>
+   
+    <div class="section-extra">
+        <h3 class="section-extra-title">Ejemplos</h3>
         <div class="form-box">
             <?php foreach ($ejemplos as $frase => $acr): ?>
                 <div class="result-item">
