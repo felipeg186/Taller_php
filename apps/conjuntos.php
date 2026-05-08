@@ -167,6 +167,6 @@ function fmt(array $arr): string {
     <?php endif; ?>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROS</footer>
 </body>
 </html>

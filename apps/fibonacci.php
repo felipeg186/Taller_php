@@ -22,7 +22,7 @@ class Sucesion {
 
    
     public function factorial(): array {
-        if ($this->n <= 0) return [1]; 
+        if ($this->n <= 0) return [1]; // 0! = 1
         $pasos = [];
         $acum  = 1;
         for ($i = 1; $i <= $this->n; $i++) {
@@ -151,6 +151,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROS</footer>
 </body>
 </html>

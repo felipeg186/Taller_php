@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <?php foreach ($pasos as $paso): ?>
             <div class="result-item result-item--row">
-                <span><?php echo $paso[0]; ?></span>
+                <span><?php echo $paso[0]; ?></span>    
                 <span><?php echo $paso[1]; ?></span>
                 <strong><?php echo $paso[2]; ?></strong>
             </div>
@@ -136,6 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROS</footer>
 </body>
-</html>
+</html>s

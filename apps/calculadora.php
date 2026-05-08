@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 class Calculadora {
@@ -8,8 +7,8 @@ class Calculadora {
     private string $operacion;
 
     public function __construct(float $a, float $b, string $operacion) {
-        $this->a         = $a;
-        $this->b         = $b;
+        $this->a = $a;
+        $this->b = $b;
         $this->operacion = $operacion;
     }
 
@@ -34,8 +33,8 @@ class Calculadora {
     public function getExpresion(): string {
         $simbolos = [
             'suma'          => '+',
-            'resta'         => '−',
-            'multiplicacion'=> '×',
+            'resta'         => '-',
+            'multiplicacion'=> 'x',
             'division'      => '÷',
             'porcentaje'    => '% de',
         ];
@@ -93,8 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['calcular'])) {
 
 $opNombres = [
     'suma'           => 'Suma (+)',
-    'resta'          => 'Resta (−)',
-    'multiplicacion' => 'Multiplicación (×)',
+    'resta'          => 'Resta (-)',
+    'multiplicacion' => 'Multiplicación (x)',
     'division'       => 'División (÷)',
     'porcentaje'     => 'Porcentaje (A% de B)',
 ];
@@ -208,6 +207,6 @@ $opNombres = [
     </div>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROSssss</footer>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 
-
 class NodoArbol {
     public string $valor;
     public ?NodoArbol $izquierdo;
@@ -142,7 +141,7 @@ class ArbolBinario {
 }
 
 function parsearRecorrido(string $input): array {
-   
+    
     $limpio = str_replace(['→', '->', '→'], ',', $input);
     $partes = preg_split('/[\s,;]+/', trim($limpio));
     $nodos  = [];
@@ -299,6 +298,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROS</footer>
 </body>
 </html>

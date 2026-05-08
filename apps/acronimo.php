@@ -1,6 +1,5 @@
 <?php
 
-
 class ConversorAcronimo {
     private string $frase;
 
@@ -39,7 +38,7 @@ $error     = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $frase = trim($_POST['frase'] ?? '');
     if ($frase === '') {
-        $error = 'Por favor ingresa una frase.';
+        $error = 'Por favor ingresa una frase';
     } else {
         $conversor = new ConversorAcronimo($frase);
         $acronimo  = $conversor->convertir();
@@ -54,6 +53,7 @@ $ejemplos = [
     
 ];
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -114,7 +114,7 @@ $ejemplos = [
     </div>
     <?php endif; ?>
 
-   
+    
     <div class="section-extra">
         <h3 class="section-extra-title">Ejemplos</h3>
         <div class="form-box">
@@ -128,6 +128,6 @@ $ejemplos = [
     </div>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROS</footer>
 </body>
 </html>

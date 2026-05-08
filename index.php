@@ -14,7 +14,7 @@ error_reporting(E_ALL);
 
 <header>
     <h1>Apps PHP — POO</h1>
-    <span style="font-size:0.75rem;letter-spacing:2px;color:#aaa;">PORTAFOLIO DE EJERCICIOS</span>
+    <span class="header-subtitle">PORTAFOLIO DE EJERCICIOS</span>
 </header>
 
 <nav>
@@ -66,7 +66,7 @@ error_reporting(E_ALL);
         <a href="apps/calculadora.php" class="app-card">
             <span class="num">07</span>
             <h3>Calculadora</h3>
-            <p>Calculadora con operaciones básicas: suma, resta, multiplicación, división y porcentaje. Guarda historial.</p>
+            <p>Calculadora con operaciones básicas: suma, resta, multiplicación, division y porcentaje. Guarda historial.</p>
         </a>
     </div>
 </main>
