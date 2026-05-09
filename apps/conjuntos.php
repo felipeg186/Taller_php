@@ -112,22 +112,22 @@ function fmt(array $arr): string {
         <form method="POST" action="">
             <div class="set-columns">
                 <div class="form-group">
-                    <label for="conjunto_a">Conjunto A</label>
+                    <label for="conjunto_a">Conjunto X</label>
                     <input
                         type="text"
                         id="conjunto_a"
                         name="conjunto_a"
-                        placeholder="Ej: 1, 2, 3, 4, 5"
+                        placeholder="p.ej: 9, 8, 7, 6, 5"
                         value="<?php echo htmlspecialchars($inputA); ?>"
                     >
                 </div>
                 <div class="form-group">
-                    <label for="conjunto_b">Conjunto B</label>
+                    <label for="conjunto_b">Conjunto Y</label>
                     <input
                         type="text"
                         id="conjunto_b"
                         name="conjunto_b"
-                        placeholder="Ej: 3, 4, 5, 6, 7"
+                        placeholder="p.ej: 5, 4, 3, 2, 1"
                         value="<?php echo htmlspecialchars($inputB); ?>"
                     >
                 </div>
@@ -140,27 +140,27 @@ function fmt(array $arr): string {
     <div class="result-box">
         <h3>Resultados</h3>
         <div class="result-item">
-            <span class="result-label">A</span>
+            <span class="result-label">X</span>
             <span><?php echo fmt($resultados['A']); ?></span>
         </div>
         <div class="result-item">
-            <span class="result-label">B</span>
+            <span class="result-label">Y</span>
             <span><?php echo fmt($resultados['B']); ?></span>
         </div>
         <div class="result-item">
-            <span class="result-label">A ∪ B (Unión)</span>
+            <span class="result-label">X ∪ Y (Unión)</span>
             <span><?php echo fmt($resultados['AuB']); ?></span>
         </div>
         <div class="result-item">
-            <span class="result-label">A ∩ B (Intersección)</span>
+            <span class="result-label">X ∩ Y (Intersección)</span>
             <span><?php echo fmt($resultados['AnB']); ?></span>
         </div>
         <div class="result-item">
-            <span class="result-label">A − B (Diferencia)</span>
+            <span class="result-label">X − Y (Diferencia)</span>
             <span><?php echo fmt($resultados['A-B']); ?></span>
         </div>
         <div class="result-item">
-            <span class="result-label">B − A (Diferencia)</span>
+            <span class="result-label">Y − X (Diferencia)</span>
             <span><?php echo fmt($resultados['B-A']); ?></span>
         </div>
     </div>

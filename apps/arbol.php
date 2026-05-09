@@ -234,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="text"
                     id="preorden"
                     name="preorden"
-                    placeholder="Ej: A → B → D → E → C"
+                    placeholder="p.ej: X → Y → Z → W → R"
                     value="<?php echo htmlspecialchars($pre); ?>"
                 >
             </div>
@@ -244,7 +244,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="text"
                     id="inorden"
                     name="inorden"
-                    placeholder="Ej: D → B → E → A → C"
+                    placeholder="p.ej: Z → Y → W → X → R"
                     value="<?php echo htmlspecialchars($ino); ?>"
                 >
             </div>
@@ -254,7 +254,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="text"
                     id="postorden"
                     name="postorden"
-                    placeholder="Ej: D → E → B → C → A"
+                    placeholder="p.ej: Z → W → Y → R → X"
                     value="<?php echo htmlspecialchars($post); ?>"
                 >
             </div>
@@ -291,9 +291,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="example-section">
         <div class="alert info">
             <strong>Ejemplo:</strong><br>
-            Preorden: A → B → D → E → C<br>
-            Inorden: D → B → E → A → C<br>
-            Postorden: D → E → B → C → A
+            Preorden: X → Y → Z → W → R<br>
+            Inorden: Z → Y → W → X → R<br>
+            Postorden: Z → W → Y → R → X
         </div>
     </div>
 </main>

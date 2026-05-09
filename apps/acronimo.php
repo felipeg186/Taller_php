@@ -96,7 +96,7 @@ $ejemplos = [
                     type="text"
                     id="frase"
                     name="frase"
-                    placeholder="Ej: Liquid-crystal display"
+                    placeholder="p.ej: Hyper Text-Markup Language"
                     value="<?php echo htmlspecialchars($_POST['frase'] ?? ''); ?>"
                 >
             </div>
@@ -109,7 +109,7 @@ $ejemplos = [
         <h3>Resultado</h3>
         <div class="result-value"><?php echo htmlspecialchars($acronimo); ?></div>
         <p class="result-note">
-            Frase procesada: <em><?php echo htmlspecialchars($resultado); ?></em>
+            la Frase Analizada: <em><?php echo htmlspecialchars($resultado); ?></em>
         </p>
     </div>
     <?php endif; ?>

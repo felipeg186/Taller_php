@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </nav>
 
 <main>
-    <h2 class="page-title">05 — Entero a Binario</h2>
+    <h2 class="page-title">05 — De un numero entero a Binario</h2>
     <p class="subtitle">Convierte un número entero a su representación en sistema binario (base 2).</p>
 
     <?php if ($error): ?>
@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h3><?php echo htmlspecialchars($inputNum); ?> en binario</h3>
         <div class="result-value"><?php echo htmlspecialchars($binario); ?></div>
         <p class="result-verify">
-            Verificación PHP: <?php echo decbin((int)$inputNum); ?>
+            Verificación con PHP: <?php echo decbin((int)$inputNum); ?>
         </p>
     </div>
 

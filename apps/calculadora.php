@@ -95,7 +95,7 @@ $opNombres = [
     'resta'          => 'Resta (-)',
     'multiplicacion' => 'Multiplicación (x)',
     'division'       => 'División (÷)',
-    'porcentaje'     => 'Porcentaje (A% de B)',
+    'porcentaje'     => 'Porcentaje (numero 1 % de numero 2)',
 ];
 ?>
 <!DOCTYPE html>
@@ -134,40 +134,42 @@ $opNombres = [
 
     <div class="form-box">
         <form method="POST" action="">
-            <div class="set-columns">
-                <div class="form-group">
-                    <label for="num_a">Número A</label>
-                    <input
-                        type="number"
-                        id="num_a"
-                        name="num_a"
-                        step="any"
-                        placeholder="Ej: 25"
-                        value="<?php echo htmlspecialchars($numA); ?>"
-                    >
+            <div class="calc-form-layout">
+                <div class="calc-form-inputs">
+                    <div class="form-group">
+                        <label for="num_a">Número 1</label>
+                        <input
+                            type="number"
+                            id="num_a"
+                            name="num_a"
+                            step="any"
+                            placeholder="Ej: 8"
+                            value="<?php echo htmlspecialchars($numA); ?>"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="num_b">Número 2</label>
+                        <input
+                            type="number"
+                            id="num_b"
+                            name="num_b"
+                            step="any"
+                            placeholder="Ej: 4"
+                            value="<?php echo htmlspecialchars($numB); ?>"
+                        >
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="num_b">Número B</label>
-                    <input
-                        type="number"
-                        id="num_b"
-                        name="num_b"
-                        step="any"
-                        placeholder="Ej: 4"
-                        value="<?php echo htmlspecialchars($numB); ?>"
-                    >
+                    <label for="operacion">Operación</label>
+                    <select id="operacion" name="operacion">
+                        <option value="">— Selecciona —</option>
+                        <?php foreach ($opNombres as $val => $nombre): ?>
+                        <option value="<?php echo $val; ?>" <?php echo ($op === $val ? 'selected' : ''); ?>>
+                            <?php echo $nombre; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="operacion">Operación</label>
-                <select id="operacion" name="operacion">
-                    <option value="">— Selecciona —</option>
-                    <?php foreach ($opNombres as $val => $nombre): ?>
-                    <option value="<?php echo $val; ?>" <?php echo ($op === $val ? 'selected' : ''); ?>>
-                        <?php echo $nombre; ?>
-                    </option>
-                    <?php endforeach; ?>
-                </select>
             </div>
             <input type="submit" name="calcular" value="Calcular →">
         </form>
@@ -207,6 +209,6 @@ $opNombres = [
     </div>
 </main>
 
-<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROSssss</footer>
+<footer>&copy; <?php echo date('Y'); ?> — PHP POO — HTML + CSS - FELIPE GUALTEROS</footer>
 </body>
 </html>

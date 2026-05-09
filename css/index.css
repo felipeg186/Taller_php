@@ -385,6 +385,20 @@ button.secondary {
 }
 
 
+.calc-form-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.calc-form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
 .alert {
     padding: 12px 16px;
     margin-bottom: 16px;

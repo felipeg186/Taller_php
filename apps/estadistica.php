@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </nav>
 
 <main>
-    <h2 class="page-title">03 — Promedio, Mediana y Moda</h2>
+    <h2 class="page-title">03 — Media, Moda y Mediana</h2>
     <p class="subtitle">Ingresa los números separados por comas o espacios. La cantidad la defines tú.</p>
 
     <?php if ($error): ?>
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <textarea
                     id="numeros"
                     name="numeros"
-                    placeholder="Ej: 4, 7.5, 2, 9, 4, 3.2, 7.5"
+                    placeholder="p.ej: 5, 4.4, 8, 9, 10, 3.3"
                 ><?php echo htmlspecialchars($inputRaw); ?></textarea>
             </div>
             <input type="submit" value="Calcular →">
@@ -127,9 +127,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <?php if ($promedio !== null): ?>
     <div class="result-box">
-        <h3>Resultados — <?php echo count($numeros); ?> números</h3>
+        <h3>Resultados obtenidos de los <?php echo count($numeros); ?> números Registrados</h3>
         <div class="result-item">
-            <span class="result-label">Promedio (Media aritmética)</span>
+            <span class="result-label">Media (Promedio)</span>
             <strong><?php echo round($promedio, 4); ?></strong>
         </div>
         <div class="result-item">
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <strong>
                 <?php
                 if (empty($moda)) {
-                    echo 'Sin moda (todos los valores son únicos)';
+                    echo 'No hay moda ya que todos los valores son diferentes)';
                 } else {
                     echo implode(', ', $moda);
                 }

@@ -100,13 +100,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="form-box">
         <form method="POST" action="">
             <div class="form-group">
-                <label for="numero">Número (n)</label>
+                <label for="numero">Número (X)</label>
                 <input
                     type="number"
                     id="numero"
                     name="numero"
                     min="0"
-                    placeholder="Ej: 10"
+                    placeholder="p.ej: 4"
                     value="<?php echo htmlspecialchars($n); ?>"
                 >
             </div>
@@ -114,8 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="operacion">Operación</label>
                 <select id="operacion" name="operacion">
                     <option value="">— Selecciona —</option>
-                    <option value="fibonacci"  <?php echo ($operacion === 'fibonacci'  ? 'selected' : ''); ?>>Sucesión de Fibonacci (primeros n términos)</option>
-                    <option value="factorial"  <?php echo ($operacion === 'factorial'  ? 'selected' : ''); ?>>Factorial de n (pasos acumulados)</option>
+                    <option value="fibonacci"  <?php echo ($operacion === 'fibonacci'  ? 'selected' : ''); ?>>Sucesión Fibonacci (Primera cantidad de X elementos)</option>
+                    <option value="factorial"  <?php echo ($operacion === 'factorial'  ? 'selected' : ''); ?>>Factorial X (pasos acumulados)</option>
                 </select>
             </div>
             <input type="submit" value="Calcular →">
@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="result-box">
         <h3>
             <?php echo $operacion === 'fibonacci'
-                ? "Fibonacci — primeros {$n} términos"
+                ? "Fibonacci — Los {$n} primeros  elementos"
                 : "Factorial — pasos de 1! a {$n}!"; ?>
         </h3>
         <div class="result-list">
