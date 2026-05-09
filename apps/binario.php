@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     type="number"
                     id="numero"
                     name="numero"
-                    placeholder="Ej: 42"
+                    placeholder="p.ej: 42"
                     value="<?php echo htmlspecialchars($inputNum); ?>"
                 >
             </div>

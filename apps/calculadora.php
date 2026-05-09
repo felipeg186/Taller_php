@@ -143,7 +143,7 @@ $opNombres = [
                             id="num_a"
                             name="num_a"
                             step="any"
-                            placeholder="Ej: 8"
+                            placeholder="p.ej: 8"
                             value="<?php echo htmlspecialchars($numA); ?>"
                         >
                     </div>
@@ -154,7 +154,7 @@ $opNombres = [
                             id="num_b"
                             name="num_b"
                             step="any"
-                            placeholder="Ej: 4"
+                            placeholder="p.ej: 4"
                             value="<?php echo htmlspecialchars($numB); ?>"
                         >
                     </div>
